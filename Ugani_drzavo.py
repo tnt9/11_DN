@@ -22,15 +22,18 @@ def country_city(country):
     print "This is not an EU country"
 
 
-def capital(cap_city):
+def state_capital(cap_city, eu_state):
     for key in keys:
-        if cap_city == key:
-            print "%s is the capital of %s" % (cap_city, state)
+        if eu_state == city_country1[key]:
+            print "The capital city is correct."
             return
-    print "Capital city has not been found."
+    print "The capital is not correct"
 
 
 state = raw_input("Please, select EU country: ")
+capital = raw_input("The capital of the selected EU country is: ")
 state = state.upper()
+capital = capital.upper()
 city = country_city(state)
-capital(city)
+state_capital(capital, state)
+
